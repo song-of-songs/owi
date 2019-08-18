@@ -6,6 +6,8 @@ import SayHi from '@/components/SayHi'
 
 import SayHiFromVariable from '@/components/Hello'
 
+import HelloWorld from '@/components/HelloWorld'
+
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +26,11 @@ export default new Router({
       path: '/say_hi_from_variable',
       name: 'SayHiFromVariable',
       component: SayHiFromVariable
+    },
+    {
+      path: '/hello_world',
+      name: 'HelloWorld',
+      component: HelloWorld
     }
   ]
 })
