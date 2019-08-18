@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>{{ message }}</h1>
+    <h1 class="h1">{{ message }}</h1>
+    加油哇！
   </div>
 </template>
 
@@ -15,4 +16,7 @@ export default {
 </script>
 
 <style>
+  .h1{
+    color: blue;
+}
 </style>
