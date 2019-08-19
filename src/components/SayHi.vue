@@ -1,6 +1,6 @@
 <template>
   <div class='hi'>
-    Hi Vue~
+    {{ message }}
   </div>
 </template>
 
