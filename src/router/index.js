@@ -4,9 +4,9 @@ import Router from 'vue-router'
 // 引入SayHi 这个component
 import SayHi from '@/components/SayHi'
 
-import SayHiFromVariable from '@/components/Hello'
-
+import Hello from '@/components/Hello'
 import HelloWorld from '@/components/HelloWorld'
+import HomePage from '@/components/HomePage'
 
 Vue.use(Router)
 
@@ -23,14 +23,19 @@ export default new Router({
       component: SayHi
     },
     {
-      path: '/say_hi_from_variable',
-      name: 'SayHiFromVariable',
-      component: SayHiFromVariable
+      path: '/hello',
+      name: 'Hello',
+      component: Hello
     },
     {
       path: '/hello_world',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/',
+      name: 'HomePage',
+      component: HomePage
     }
   ]
 })
