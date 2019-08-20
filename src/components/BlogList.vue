@@ -43,7 +43,7 @@ export default {
 
 <style>
   h1 {
-    color: #DF5EAA;
+    color: #AFAFAF;
   }
   td {
     color: #428353;
