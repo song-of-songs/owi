@@ -1,10 +1,23 @@
 <template>
   <div>
-    <table>
-      <tr v-for='blog in blogs' :key="blog">
-        <td></td>
-      </tr>
-    </table>
+    <div>
+      <h1>{{ title }}</h1>
+    </div>
+    <div>
+      <table>
+        <tr v-for='blog in blogs' :key="blog">
+          <td>
+            {{ blog.id }}
+          </td>
+          <td>
+            {{ blog.title }}
+          </td>
+          <td>
+            {{ blog.created_at }}
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </template>
 
@@ -29,7 +42,11 @@ export default {
 </script>
 
 <style>
+  h1 {
+    color: #DF5EAA;
+  }
   td {
-    border-bottom: 1px solid grey
+    color: #428353;
+    border-bottom: 1px solid grey;
   }
 </style>
