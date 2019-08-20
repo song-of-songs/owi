@@ -7,6 +7,7 @@ import SayHi from '@/components/SayHi'
 import Hello from '@/components/Hello'
 import HelloWorld from '@/components/HelloWorld'
 import HomePage from '@/components/HomePage'
+import Test1 from '@/components/CodeTest/ECMAScript/app/Test1'
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/',
       name: 'HomePage',
       component: HomePage
+    },
+    {
+      path: '/test1',
+      name: 'Test1',
+      component: Test1
     }
   ]
 })

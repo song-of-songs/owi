@@ -1,7 +1,19 @@
 <template>
   <div>
-    <h1 class="h1">{{ message }}</h1>
-    加油哇！
+
+    <div>
+      <h1 class="h1">{{ my_value }}</h1>
+      <p>加油哇！</p>
+    </div>
+
+    <div>
+      <input type='button' @click='show_my_value()' value='show' />
+    </div>
+
+    <div>
+      <input type='button' v-on:click="say_hi('Jim')" value="show2" />
+    </div>
+
   </div>
 </template>
 
@@ -9,7 +21,16 @@
 export default {
   data () {
     return {
-      message: 'ni hao ~  in Hello.vue'
+      my_value: '默认值'
+    }
+  },
+  mothods: {
+    show_my_value: function () {
+      alert('my_value: ' + this.my_value)
+    },
+
+    say_hi: function (name) {
+      alert('hi,' + name)
     }
   }
 }

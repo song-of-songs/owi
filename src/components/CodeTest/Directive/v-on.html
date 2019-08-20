@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>v-on</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+    <br>
+    <button v-on:click='highlight' style='margin-top: 50px'>OK?</button>
+  </div>
+  <script>
+    var app = new Vue ({
+      el: '#app',
+      data: {
+        message: 'Vue.js'
+      },
+      methods: {
+        highlight: function () {
+          this.message = this.message + 'yes'
+        }
+      }
+    })
+  </script>
+</body>
+</html>
