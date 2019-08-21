@@ -9,6 +9,7 @@ import HelloWorld from '@/components/HelloWorld'
 import HomePage from '@/components/HomePage'
 import Test1 from '@/components/CodeTest/ECMAScript/app/Test1'
 import BlogList from '@/components/BlogList'
+import Blog from '@/components/Blog'
 
 Vue.use(Router)
 
@@ -48,6 +49,11 @@ export default new Router({
       path: '/blog_list',
       name: 'BlogList',
       component: BlogList
+    },
+    {
+      path: '/blog',
+      name: 'Blog',
+      component: Blog
     }
   ]
 })

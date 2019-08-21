@@ -1,23 +1,32 @@
 <template>
   <div>
+
     <div>
       <h1>{{ title }}</h1>
     </div>
+
     <div>
       <table>
+
         <tr v-for='blog in blogs' :key="blog">
-          <td>
+
+          <td @click='show_blog(blog.id)'>
             {{ blog.id }}
           </td>
-          <td>
+
+          <td @click='show_blog(blog.id)'>
             {{ blog.title }}
           </td>
+
           <td>
             {{ blog.created_at }}
           </td>
+
         </tr>
+
       </table>
     </div>
+
   </div>
 </template>
 
@@ -37,6 +46,11 @@ export default {
     }, (response) => {
       console.error(response)
     })
+  },
+  methods: {
+    show_blog: function (blogId) {
+      this.$router.push({name: 'Blog', query: {id: blogId}})
+    }
   }
 }
 </script>
